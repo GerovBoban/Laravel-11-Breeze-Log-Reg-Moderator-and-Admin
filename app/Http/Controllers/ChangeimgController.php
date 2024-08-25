@@ -64,7 +64,9 @@ class ChangeimgController extends Controller
 
             $filename = $request->getSchemeAndHttpHost() . '/image/' . time() . '.' . $request->img_lnk->extension();
             $request->img_lnk->move(public_path() . '/image/', $filename);
+            
         }
+        
         $blanco = ' ';
         $txtwelcome = Txtwelcome::create([
             'img_lnk' => $filename,

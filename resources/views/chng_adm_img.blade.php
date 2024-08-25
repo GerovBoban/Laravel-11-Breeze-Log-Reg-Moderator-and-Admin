@@ -13,7 +13,7 @@
             {{-- @foreach ($txtwelcomes as $txtwelcome) --}}
 
             {{-- COMBINATION 2 - Ako stavim ovo ispod - daje SVE slike iz FOLDERA  --}}
-            @foreach (File::glob(public_path('image') . '/*') as $path)
+            @foreach (File::glob(public_path('/image/') . '/*') as $path)
                 <div class="new-note-btn new-note-btn-portfolio">
                     <div class="flex-container">
                         <div class="img-welcome">
@@ -21,7 +21,9 @@
                             {{-- <img src="{{ URL::asset($txtwelcome->img_lnk, 100) }}" alt="Admin - Gerov Boban"> --}}
 
                             {{-- COMBINATION 2 - Ako stavim ovo ispod - daje SVE slike iz FOLDERA  --}}
-                            <img src="{{ str_replace(public_path(), '', $path) }}" alt="Admin - Gerov Boban">
+                            {{-- Ovo ispod radi na LOCAL ali ne i na SERVER - Moram da dodam ime FOLDERA --}}
+                            {{-- <img src="{{ str_replace(public_path(), '', $path) }}" alt="Admin - Gerov Boban"> --}}
+                            <img src="{{ str_replace(public_path(), '/image/', $path) }}" alt="Admin - Gerov Boban">
                         </div>
                         <div class="new-note-btn new-note-btn-portfolio">
 
@@ -40,7 +42,9 @@
 
 
                                 {{-- COMBINATION 2 - Ako stavim ovo ispod - daje SVE slike iz FOLDERA  --}}
-                                <input type="hidden" value="{{ str_replace(public_path(), '', $path) }}"
+                                {{-- Ovo ispod radi na LOCAL ali ne i na SERVER - Moram da dodam ime FOLDERA --}}
+                                {{-- <input type="hidden" value="{{ str_replace(public_path(), '', $path) }}" --}}
+                                <input type="hidden" value="{{ str_replace(public_path(), '/image/', $path) }}"
                                     name="key">
                             </form>
                         </div>

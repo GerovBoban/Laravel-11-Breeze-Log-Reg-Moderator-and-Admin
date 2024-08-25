@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ChangeimgController;
 use App\Http\Controllers\AvoHomeController;
@@ -6,16 +7,20 @@ use App\Http\Controllers\ImageCVController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\FaktureController;
-use App\Http\Controllers\NoteController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/proba', [ProbaController::class, 'Proba'])
+->name('proba');
 
-Route::get('/', [AvoHomeController::class, 'homepage'])->name('welcome');
+Route::get('/', [AvoHomeController::class, 'homepage'])
+->name('welcome');
 
-Route::get('/chng_adm_img', [DemoController::class, 'copyImage'])->name('copyImage')->middleware(['auth', 'verified'])->name('copyImage');
+Route::get('/chng_adm_img', [DemoController::class, 'copyImage'])
+->name('copyImage')
+->middleware(['auth', 'verified'])->name('copyImage');
 
 Route::get('/email', function () {
     Illuminate\Support\Facades\Mail::send(new \App\Mail\OrderEmail());
@@ -23,24 +28,16 @@ Route::get('/email', function () {
 });
 
 
-Route::redirect('/note', '/')->name('dashboard');
+Route::redirect('/dashboard', '/superadmin')
+->name('dashboard');
 
-Route::redirect('/dashboard', '/superadmin')->name('dashboard');
+Route::get('/fakture', [FaktureController::class, 'Fakture'])
+->middleware(['auth', 'verified'])
+->name('fakture');
 
-Route::get('/fakture', [FaktureController::class, 'Fakture'])->middleware(['auth', 'verified'])->name('fakture');
-Route::get('/superadmin', [SuperadminController::class, 'Superadmin'])->middleware(['auth', 'verified'])->name('superadmin');
-
-    Route::middleware(['auth', 'verified'])->group(function () {
-        // Route::get('/note', [NoteController::class, 'index'])->name('note.index');
-        // Route::get('/note/create', [NoteController::class, 'create'])->name('note.create');
-        // Route::post('/note', [NoteController::class, 'store'])->name('note.store');
-        // Route::get('/note/{id}', [NoteController::class, 'show'])->name('note.show');
-        // Route::get('/note/{id}/edit', [NoteController::class, 'edit'])->name('note.edit');
-        // Route::put('/note/{id}', [NoteController::class, 'update'])->name('note.update');
-        // Route::delete('/note/{id}', [NoteController::class, 'destroy'])->name('note.destroy');
-
-            Route::resource('note', NoteController::class);
-            });
+Route::get('/superadmin', [SuperadminController::class, 'Superadmin'])
+->middleware(['auth', 'verified'])
+->name('superadmin');
 
     Route::middleware(['auth', 'verified'])->group(function () {
         // Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');

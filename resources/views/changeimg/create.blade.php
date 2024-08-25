@@ -34,7 +34,7 @@
                         <textarea name="txt_3" rows="5" class="button button5C" placeholder="Text 3 here"></textarea>
                     </div> --}}
                     <div class="note-buttons">
-                        <a href="{{ route('changeimg.index') }}" class="note-cancel-button">Cancel</a>
+                        <a href="{{ route('superadmin') }}" class="note-cancel-button">Cancel</a>
                         <button type="submit" class="note-submit-button">Submit</button>
                     </div>
                 </form>

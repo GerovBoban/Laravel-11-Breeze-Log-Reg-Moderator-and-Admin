@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 
-<p>LThis is the first project I am uploading to GitHub. I used the material of some developers, so for that reason I am not changing the content of this page. I hereby thank them. I learned a lot from them. By the way, this is my refinement of the installed Breeze starter package. I hope I get this right. I will post a link to the video material soon... Just to get the microphone I ordered.
+<p>This is the first project I am uploading to GitHub. I used the material of some developers, so for that reason I am not changing the content of this page. I hereby thank them. I learned a lot from them. By the way, this is my refinement of the installed Breeze starter package. I hope I get this right. I will post a link to the video material soon... Just to get the microphone I ordered.
 
 Laravel 11, with Breeze. Log in and register. Moderator and admin privileges included. Change full content. Change the image for the Welcome page (avatar).
 </p>

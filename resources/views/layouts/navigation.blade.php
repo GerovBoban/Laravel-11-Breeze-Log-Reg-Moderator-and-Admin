@@ -49,8 +49,16 @@
                             {{ 'Fakture' }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('note.index')">
-                            {{ 'Note' }}
+                        {{-- <x-dropdown-link :href="route('normativi.index')">
+                            {{ 'Normativi' }}
+                        </x-dropdown-link> --}}
+
+                        <x-dropdown-link :href="route('fakture')">
+                            {{ 'Normativi' }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('fakture')">
+                            {{ 'Paking_lista' }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
