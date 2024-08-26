@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ChangeimgController;
 use App\Http\Controllers\AvoHomeController;
@@ -12,8 +13,9 @@ use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/proba', [ProbaController::class, 'Proba'])
-->name('proba');
+
+Route::get('/download', [DownloadController::class, 'download'])
+->name('download');
 
 Route::get('/', [AvoHomeController::class, 'homepage'])
 ->name('welcome');

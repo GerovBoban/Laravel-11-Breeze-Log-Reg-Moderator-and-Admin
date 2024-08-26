@@ -112,6 +112,7 @@ class ImageCVController extends Controller
         }
  
         $txtwelcome = $request->validate([
+            'Yes_No' => ['required', 'string'],
             'img_name' => ['required', 'string'],
             'txt_1' => ['required', 'string'],
             'txt_2' => ['required', 'string'],
@@ -120,6 +121,7 @@ class ImageCVController extends Controller
         ]);
   
             $txtwelcome = Txtwelcome::find($id);
+            $txtwelcome->Yes_No=$request->Yes_No;
             $txtwelcome->img_name=$request->img_name;
             $txtwelcome->txt_1=$request->txt_1;
             $txtwelcome->txt_2=$request->txt_2;

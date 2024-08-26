@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="note-container py-12">
-        <a href="{{ route('txtwelcome.create') }}" class="new-note-btn new-note-btn-welcome">
+        <a href="{{ route('txtwelcome.create') }}" class="new-note-btn new-note-btn-portfolio">
             <div class="button">
                 Щракнете тук и въведете данни - биография - за началната страница<br>
                 <b>Click here and enter details - biography - for the home page</b><br>
@@ -13,6 +13,14 @@
                 <div class="new-note-btn new-note-btn-portfolio">
                     <div class="note-portfolio">
                         <div class="flex-container">
+                        </div>
+                        <div class="new-note-btn new-note-btn-portfolio">
+                            <label for="exampleInputEmail1" class="note-body">DA - Vidi se *** NE - Ne vidi se</label>
+                            <div class="note-portfolio">
+                                <div class="button button5C">
+                                    {{ Str::words($txtwelcome->Yes_No, 100) }}
+                                </div>
+                            </div>
                         </div>
                         <div class="new-note-btn new-note-btn-portfolio">
                             <label for="exampleInputEmail1" class="note-body">Ime i prezime - NE KORISTIM</label>

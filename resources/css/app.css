@@ -187,7 +187,8 @@ img {
 }
 
 .new-note-btn-welcome {
-    width: 700px;
+    /* width: 700px; */
+    width: 100%;
 }
 
 .new-note-btn-super-admin {

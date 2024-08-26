@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="note-container py-12">
-        <a href="{{ route('portfolio.create') }}" class="new-note-btn new-note-btn-welcome">
+        <a href="{{ route('portfolio.create') }}" class="new-note-btn new-note-btn-portfolio">
             <div class="button">
                 Щракнете тук и въведете ново съобщение за началната страница<br>
                 <b>Click here and type a new message for the home page</b><br>
@@ -10,6 +10,7 @@
         <div class="notes">
             @foreach ($portfolios as $portfolio)
                 <div class="new-note-btn new-note-btn-portfolio">
+                    <label for="exampleInputEmail1" class="note-body">DA - Vidi se *** NE - Ne vidi se</label>
                     <div class="note-portfolio">
                         <div class="button button5C">
                             {{ Str::words($portfolio->Yes_No, 100) }}
